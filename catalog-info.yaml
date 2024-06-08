@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xskc2zbkp-python-gitops
+  description: This is GitOps manifest for xskc2zbkp-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xskc2zbkp-python
+    janus-idp.io/tekton: xskc2zbkp-python 
+    backstage.io/kubernetes-id: xskc2zbkp-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xskc2zbkp-python
